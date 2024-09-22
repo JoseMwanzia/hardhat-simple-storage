@@ -3,6 +3,8 @@ require("dotenv").config()
 require("@nomicfoundation/hardhat-verify")
 require('./tasks/block-number');
 require('hardhat-gas-reporter');
+require('solidity-coverage')
+ 
 /** @type import('hardhat/config').HardhatUserConfig */
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL
