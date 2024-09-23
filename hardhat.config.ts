@@ -1,9 +1,10 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config()
-require("@nomicfoundation/hardhat-verify")
-require('./tasks/block-number');
-require('hardhat-gas-reporter');
-require('solidity-coverage')
+import "@nomicfoundation/hardhat-toolbox"
+import "dotenv/config"
+import "@nomicfoundation/hardhat-verify"
+import './tasks/block-number'
+import 'hardhat-gas-reporter'
+import 'solidity-coverage'
+import '@typechain/hardhat'
  
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -36,9 +37,6 @@ module.exports = {
     outputFile: "gas-report.txt",
     noColors: true,
     coinmarketcap: COINMARKETCAP_API_KEY,
-
-    L1: "polygon",
-
   }
 
 }
